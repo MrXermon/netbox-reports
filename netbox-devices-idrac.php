@@ -19,7 +19,7 @@ $netbox = new GuzzleHttp\Client(['base_uri' => $netbox_url, 'headers' => ['accep
 /*
  * Fetch all devices from Netbox and decode json.
  */
-$devices = $netbox->request('GET', '/api/dcim/devices/', ['query' => ['limit' => 999, 'manufacturer_id' => 3]]);
+$devices = $netbox->request('GET', '/api/dcim/devices/', ['query' => ['limit' => 999]]);
 if(!$devices)
 	exit('Unable to fetcgh circuits from Netbox!');
 $devices = json_decode($devices->getBody(), true);
