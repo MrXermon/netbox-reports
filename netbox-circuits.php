@@ -53,6 +53,7 @@ foreach($circuits['results'] as $circuit){
 		$circuit['type']['name'],
 		$circuit['tenant']['name'],
 		$circuit['description'],
+		$circuit['comments'],
 		$circuit['custom_fields']['ext_contract'],
 	);
 
